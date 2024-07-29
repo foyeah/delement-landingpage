@@ -1,5 +1,5 @@
-const TerserPlugin = require('terser-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -36,26 +36,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|woff|woff2)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ],
   },
 
-  resolve: {
-    extensions: [".js", ".jsx"],
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new MiniCssExtractPlugin(),
+  ],
 
   devServer: {
     historyApiFallback: true,
     hot: true,
-  },
-
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin(),
-      new CssMinimizerPlugin(),
-    ],
   },
 };
