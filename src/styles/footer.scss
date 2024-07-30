@@ -9,13 +9,13 @@
     padding-right: 40px;
   }
 
-  &__coop,
+  &__our-team,
   &__info,
   &__copyright {
     background-color: var(--headingLigher);
   }
 
-  &__coop {
+  &__our-team {
     border-radius: 0px 200px 0px 0px;
   }
 
@@ -28,7 +28,7 @@
   }
 }
 
-.coop {
+.our-team {
   position: relative;
   padding-top: 89px;
   padding-bottom: 100px;
@@ -87,7 +87,7 @@
   }
 }
 
-.coop-modal {
+.our-team-modal {
   background-color: rgba(0, 0, 0, 0.6);
 
   &__container {
