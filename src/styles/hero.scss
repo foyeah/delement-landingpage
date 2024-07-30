@@ -1,0 +1,62 @@
+@import 'variabiles.scss';
+
+.hero {
+  background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+
+  &__wrapper {
+    padding-top: 97px;
+    padding-bottom: 190px;
+    background: url('../assets/images/hero-bg.svg') right 3% top 2% / auto no-repeat;
+
+    @media (max-width: 1300px) {
+      background-position: right 3% top 30%;
+      background-size: 35%;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      background-position: right 10% bottom 0%;
+    }
+
+    @media (max-width: 576px) {
+      background: none;
+    }
+  }
+
+  &__content {
+    max-width: 510px;
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 0.6em;
+    font-family: 'Galien', serif;
+    font-size: 54px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0.054em;
+    color: var(--heading);
+
+    @media (max-width: 1024px) {
+      font-size: 38px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    max-width: 425px;
+    margin: 0;
+  }
+
+  &__btn {
+    margin-top: 75px;
+
+    @media (max-width: 576px) {
+      margin-top: 30px;
+    }
+  }
+}
