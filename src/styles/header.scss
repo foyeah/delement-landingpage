@@ -1,0 +1,30 @@
+@import 'variabiles.scss';
+
+.header {
+  padding-top: 32px;
+
+  &__container {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+  padding: 8px 4px;
+
+  &path {
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &:hover path {
+    fill: var(--btn);
+  }
+
+  &:active path {
+    fill: black;
+  }
+}

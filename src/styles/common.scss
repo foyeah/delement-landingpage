@@ -1,0 +1,139 @@
+@import 'variabiles.scss';
+@import 'fonts.scss';
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  min-width: 360px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  min-width: 360px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+input {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 213px;
+  max-width: 1366px;
+
+  @media (max-width: 1200px) {
+    padding: 0 50px;
+  }
+
+  &_wide {
+    padding: 0 83px;
+
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
+  }
+}
+
+.btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn_primary {
+  display: inline-block;
+  min-width: 220px;
+  padding: 1em;
+  text-align: center;
+  color: var(--headingInverted);
+  background-color: var(--btn);
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.5;
+  }
+}
+
+.logo {
+  display: flex;
+  transition: opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.section-heading {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.28;
+  letter-spacing: 0.05em;
+}
