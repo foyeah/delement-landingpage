@@ -26,6 +26,10 @@
   &__copyright-text {
     opacity: 0.4;
   }
+
+  &_logo {
+    font-weight: 700;
+  }
 }
 
 .our-team {
@@ -84,5 +88,11 @@
     @media (max-width: 768px) {
       justify-self: start;
     }
+  }
+}
+
+.info {
+  &__logo {
+    font-weight: 600;
   }
 }
