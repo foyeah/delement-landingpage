@@ -1,15 +1,13 @@
 @import 'variabiles.scss';
 
 .header {
-  padding-top: 32px;
-
-  &__container {
-    height: 48px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  padding: 64px 83px 22px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
