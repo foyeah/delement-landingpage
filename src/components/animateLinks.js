@@ -15,7 +15,6 @@ export function animateLinks() {
     const [arrow] = link.getElementsByTagName('svg');
 
     link.addEventListener('mouseover', () => addActive(arrow));
-
     link.addEventListener('mouseleave', () => removeActive(arrow));
   });
 }
